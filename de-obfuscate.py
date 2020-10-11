@@ -1,3 +1,21 @@
+"""Python script that I wrote to statically de-obfuscate javascript based malware without running the file
+
+Extracts and normalises heavily obfuscated variable and function names
+
+Outputs a text with human-readable filenames, variables and functions
+Output is *similar* to that of the original javascript before obfuscation
+
+
+Intention is to allow an analyst to get an idea for what the file does, without needing a sandbox to run it :)
+
+Still a work in progress, need to expand capability to cover more obfuscation techniques
+
+"""
+
+
+
+
+
 #!/usr/bin/python
 
 
