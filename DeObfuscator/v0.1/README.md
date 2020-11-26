@@ -1,5 +1,5 @@
 
-Version 0.1 of a python based javascript-deobfuscator
+#Version 0.1 of a python based javascript-deobfuscator
 
 Intention was to automate the "search and replace" step of javacript malware de-obfuscation. 
 
