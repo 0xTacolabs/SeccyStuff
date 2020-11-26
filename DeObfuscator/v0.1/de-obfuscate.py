@@ -10,6 +10,11 @@ Intention is to allow an analyst to get an idea for what the file does, without 
 
 Still a work in progress, need to expand capability to cover more obfuscation techniques
 
+Note that currently only works on very small number of javascript malware samples
+I have attempted a v0.2 (In other folder), which takes a different approach to this. 
+
+Should work ok on samples in the v0.1 examples folder
+
 """
 
 
