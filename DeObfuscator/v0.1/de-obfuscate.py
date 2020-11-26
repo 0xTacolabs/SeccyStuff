@@ -2,8 +2,7 @@
 
 Extracts and normalises heavily obfuscated variable and function names
 
-Outputs a text with human-readable filenames, variables and functions
-Output is *similar* to that of the original javascript before obfuscation
+Outputs a text with human-readable (but not executable) filenames, variables and functions. 
 
 
 Intention is to allow an analyst to get an idea for what the file does, without needing a sandbox to run it :)
@@ -15,6 +14,7 @@ I have attempted a v0.2 (In other folder), which takes a different approach to t
 
 Should work ok on samples in the v0.1 test files folder
 
+Very much still a WIP
 """
 
 
