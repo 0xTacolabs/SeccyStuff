@@ -1,9 +1,7 @@
 """ Python Implementation of reg.py for windows
-    I wrote this for the technical assessment component of a job application a few years ago
-    I didn't get the job, but I thought I might as well put this up somewhere since I put some solid effort into it
-    
-    Note that I had fairly minimal knowledge of windows internals and python at the time, so there are many parts of this script that 
-      are relatively inefficient or oddly coded. I was mostly concerned about getting it working at the time. 
+    I wrote this a few years ago to learn about registry keys and practice my python. 
+    It's not fantastic code, but it works :)
+   
       
     At some point, I will go through and clean it up, and possibly add some new functionality. 
     
