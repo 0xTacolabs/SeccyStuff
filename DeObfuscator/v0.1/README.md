@@ -9,6 +9,7 @@ Resolves values to previously defined values, then updates the dictionary.
 
 eg 
 var ss2 = new activexobject; # would update dict with {ss2::"activexobject"}
+
 var x3 = ss2[filesystemobject]; #would resolves ss2 -> activexobject, and update dict with {x3:"activexobject[filesystemobject]}
 
 And so on
