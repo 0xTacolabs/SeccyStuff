@@ -13,7 +13,7 @@ Still a work in progress, need to expand capability to cover more obfuscation te
 Note that currently only works on very small number of javascript malware samples
 I have attempted a v0.2 (In other folder), which takes a different approach to this. 
 
-Should work ok on samples in the v0.1 examples folder
+Should work ok on samples in the v0.1 test files folder
 
 """
 
