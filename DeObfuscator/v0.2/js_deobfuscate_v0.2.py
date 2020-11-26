@@ -1,3 +1,14 @@
+"""Second attempt at writing a javascript de-obfuscator in python
+
+Still doesn't work great, very much a work-in-progress. 
+
+Assumes that encoding has already been removed with cyberchef or similar, 
+Instead, focuses on building a dictionary of obfuscated functions and var names. 
+
+
+"""
+
+
 #!/usr/bin/python
 
 import re
@@ -12,8 +23,8 @@ varDict = {'new':"", "this":""}
 
 
 def StringisReserved(string):
-	
-	
+	#doesn't resolve a word if it is "reserved" in javascript
+	 
 	badList = ["null","false","true", "split","length"]
 	
 	#if (len(string) == 1):
@@ -32,7 +43,7 @@ def StringisReserved(string):
 
 
 def resolveVar(line,varDict):
-	
+	#resolves words to previously defined values in the var/func dictionary
 	try:
 		p = re.compile(r'([\d\w\_\-]+)')
 		r = p.findall(line)
@@ -59,7 +70,7 @@ def resolveVar(line,varDict):
 	return line
 
 def getSimpleVars(line,varDict):
-
+	#extracts simple one line variable/function assignments. 
 	try:
 		#p = re.compile(r'([\wa-zA-Z\_]+)\s*=\s*\'?([\;\+\(\)\'\"\ \d\w\&\.\-\_]+)\'?[;\n]$')
 		p = re.compile(r'([\d\w\_]+)\s*=\s*\'?(.*)\'?;')
@@ -69,6 +80,7 @@ def getSimpleVars(line,varDict):
 		pass
 		
 def resolveMath(line):
+	#resolves any math equations used to obfuscate array references
 	try:
 		p = re.compile(r"(\([\d\s\+\-\*]+\))")
 		r = p.findall(line)
@@ -83,7 +95,7 @@ def resolveMath(line):
 
 
 def updateDict(line,varDict):
-	
+	#updates dictionary with values extracted in current line
 	try:
 		resultSet = getSimpleVars(line,varDict)
 	except:
